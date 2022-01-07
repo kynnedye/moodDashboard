@@ -1,0 +1,171 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+body{
+    margin: 0;
+    
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    font-family: noto sans mono, sans-serif;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+    
+
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    border: white 2px solid;
+
+}
+.btn-container{
+    display: flex;
+    max-width: 600px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.btn-style{
+    margin:10px;
+    padding: 15px 30px;
+    font-family: noto sans mono, sans-serif;
+    border:none;
+    font-weight: 700;
+    border:white 2px solid;
+    color: rgb(29, 3, 53);
+    background: rgba(277,277,277,.4);
+}
+.btn-style:hover,
+.btn-style:focus{
+    background: white;
+}
+#mood{
+    color: rgb(29, 3, 53);
+    font-size: 2.5rem;
+}
+
+ h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(29, 3, 53); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .8s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 50% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(29, 3, 53); }
+  }
+  
+.container-2{
+    margin: 0;
+    
+    color: white;
+    font-family: noto sans mono, Helvetica, sans-serif;
+    text-shadow: 2px 2px 2px #474747;
+
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 15px;
+    
+}
+.section1{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.15rem;
+}
+#time{
+    text-align: center;
+    font-size: 3.5rem;
+}
+#weather{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-self: flex-start;
+}
+#crypto{
+    display: flex;
+    flex-direction: column;
+}
+#crypto > p{
+    margin: 0;
+}
+#crypto-top{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+span{
+    margin-left:50px;
+}
+
+.bottom{
+    display: flex;
+    
+    justify-content: space-between;
+}
+#misc{
+    margin-bottom: 0;
+}
+/* Styling for serene */
+.meditation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: lavender;
+    width: 200px;
+    height: 100px;
+    color: rgb(29, 3, 53);
+    text-shadow: none;
+    border-radius: 3px;
+}
+#start-time{
+    background: rgb(29, 3, 53);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 15px, 30px;
+}
+#quote{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0,0,0,.7);
+    border-radius: 3px;
+}
+
+/* styling focus */
+
+.nasa-url{
+    max-width: 400px;
+}
+.space-info{
+    width:40%;
+}
