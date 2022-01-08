@@ -116,12 +116,18 @@ sereneBtn.addEventListener("click", function(){
 })
 sadBtn.addEventListener("click", function(){
     getPicture(sad)
+
+
+  misc.innerHTML = `
+    <h2>Feeling bored or sad?</h2>
+    <button onclick ="findActivity()" class="bored-btn">Find a fun activity</button>
+  `
 })
 hopefulBtn.addEventListener("click", function(){
     fetch("https://quotes.rest/qod?category=love&language=en")
         .then(res => res.json())
         .then( data => {
-            console.log(data)
+           
             misc.innerHTML = `<div id = "quote">
            
             <blockquote >
@@ -137,7 +143,8 @@ hopefulBtn.addEventListener("click", function(){
 excitedBtn.addEventListener("click", function(){
     getPicture(excited)
 })
- function countDown(){
+
+function countDown(){
     let seconds = 0;
 let minutes = 5;
 
@@ -215,6 +222,18 @@ audio.onended = function(){
 audio.play();
 }
 
+}
+
+
+function findActivity(){
+    fetch("https://www.boredapi.com/api/activity/")
+        .then(res => res.json())
+        .then(data => {
+            misc.innerHTML = `<h2>${data.activity}</h2>
+            <button onclick = "findActivity()"class="bored-btn">Find another activity</button>
+            `
+
+        })
 }
 
 

@@ -160,6 +160,13 @@ span{
     background: rgba(0,0,0,.7);
     border-radius: 3px;
 }
+.bored-btn{
+    background: rgb(226, 67, 88);
+    border: none;
+    padding: .75em 1.5em;
+    border-radius: 5px;
+    color: white;
+}
 
 /* styling focus */
 
