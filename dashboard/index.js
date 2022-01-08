@@ -11,6 +11,8 @@ const timeDisplay = document.getElementById("time")
 const misc = document.getElementById("misc")
 const startTime = document.getElementById("start-time")
 
+
+
 const angry = [
      
        
@@ -67,6 +69,22 @@ const excited = [
 ]
 angryBtn.addEventListener("click", function(){
     getPicture(angry)
+    const audioAngry = [
+        "audio/mad1.mp3",
+        "audio/mad2.mp3",
+        "audio/mad3.mp3",
+        "audio/mad4.mp3",
+        "audio/mad5.mp3",
+        "audio/mad6.mp3"
+    ]
+    let randomIndex = Math.floor(Math.random() * 6)
+  misc.innerHTML = `
+   <audio controls>
+    <source src ="${audioAngry[randomIndex]}">
+   </audio>
+  
+  `
+    
 })
 happyBtn.addEventListener("click", function(){
     getPicture(happy)
@@ -185,7 +203,7 @@ function stopWatch(){
 }
  let stop = setInterval(stopWatch, 1000)
 
- var audio = new Audio("meditationmus.mp3");
+ var audio = new Audio("audio/meditationmus.mp3");
 
 audio.oncanplaythrough = function(){
 audio.play();
