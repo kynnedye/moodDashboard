@@ -88,6 +88,22 @@ angryBtn.addEventListener("click", function(){
 })
 happyBtn.addEventListener("click", function(){
     getPicture(happy)
+
+    fetch("https://v2.jokeapi.dev/joke/Any?type=single")
+        .then(res => res.json())
+        .then(data => {
+            misc.innerHTML = `
+            <div class="bg">
+            <h2>Joke of the day:</h2>
+            <p>${data.joke}</p>
+            </div>
+            `
+            
+
+        })
+
+
+   
 })
 focusBtn.addEventListener("click", function(){
     getPicture(focused)
@@ -97,12 +113,12 @@ focusBtn.addEventListener("click", function(){
             console.log(data)
             console.log(data.url)
             misc.innerHTML = `
-            <div class="astronomy>
+            <div class="bg astronomy">
                 <h3 class ="nasa"> Check out Nasa's latest finding</h3>
                 <img class="nasa-url" src="${data.url}">
                 <p class ="space-info">${data.explanation}</p>
             
-            </div>"`
+            </div>`
         })
 })
 sereneBtn.addEventListener("click", function(){
@@ -119,8 +135,10 @@ sadBtn.addEventListener("click", function(){
 
 
   misc.innerHTML = `
+    <div class="bg">
     <h2>Feeling bored or sad?</h2>
     <button onclick ="findActivity()" class="bored-btn">Find a fun activity</button>
+    </div>
   `
 })
 hopefulBtn.addEventListener("click", function(){

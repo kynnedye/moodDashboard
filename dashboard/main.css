@@ -130,7 +130,15 @@ span{
     justify-content: space-between;
 }
 #misc{
-    margin-bottom: 0;
+    
+
+    width:70%;
+    
+    margin: 0 auto;
+    margin-bottom: 2em;
+}
+.bg{
+    background: rgba(0,0,0,.7);
 }
 /* Styling for serene */
 .meditation{
@@ -170,9 +178,19 @@ span{
 
 /* styling focus */
 
-.nasa-url{
-    max-width: 400px;
-}
+
 .space-info{
-    width:40%;
+    font-size: .7rem;
+}
+.astronomy{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    
+    max-width: 500px;
+    justify-content: center;
+    margin: 0 auto;
+}
+.nasa-url{
+    width:100%;
 }
